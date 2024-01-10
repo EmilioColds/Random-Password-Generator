@@ -34,5 +34,22 @@ function generatePassword() {
         return;
     }
 
+    let characters = '';
+    const lowercaseList = "abcdefghijklmnopqrstuvwxyz";
+    const uppercaseList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numberList = "0123456789";
+    const specialList = "!@#$%^&*().,;:-_[]";
+
+    if (lowercaseCharact) characters += lowercaseList;
+    if (uppercaseCharact) characters += uppercaseList;
+    if (numberCharact) characters += numberList;
+    if (specialCharact) characters += specialList;
+
+    let password = '';
+    for (let i = 0; i < passwordLength; i++) {
+        const randomPassword = Math.floor(Math.random() * characters.length);
+        password += characters[randomPassword];
+    }
+
     return password;
 }
