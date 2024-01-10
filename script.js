@@ -13,15 +13,26 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-function passwordGenerator() {
+function generatePassword() {
 
-    const length = window.prompt("Please select a length for your password. It has to be between 8 - 128 characters.")
+    const passwordLength = window.prompt("Please select a length for your password. It has to be between 8 - 128 characters.")
 
-    if (length <8 || length > 128) {
-        window.alert ("The length of your password NEEDS to be between 8 and 128 characters.");
+    if (passwordLength < 8 || passwordLength >= 129) {
+        window.alert ("The length of your password NEEDS to be between 8 and 128 characters. Try again.");
+        generatePassword();
         return; 
     }
 
-}
+    const lowercaseCharact = confirm("Would you like your password to include LOWERCASE characters?")
+    const uppercaseCharact = confirm("Would you like your password to include UPPERCASE characters?")
+    const numberCharact = confirm("Would you like your password to include NUMBERS?")
+    const specialCharact = confirm("Would you like your password to include SPECIAL characters?")
 
-passwordGenerator();
+    if (!lowercaseCharact && !uppercaseCharact && !numberCharact && !specialCharact){
+        window.alert ("You NEED to apply at least ONE type of characters to your password. Try again.");
+        generatePassword();
+        return;
+    }
+
+    return password;
+}
