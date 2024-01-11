@@ -33,3 +33,9 @@ THEN the password is either displayed in an alert or written to the page
 Finally, I present the final visual result of the web application's appearance and functionality:
 
 ![The Password Generator application displays a red button to "Generate Password".](./Assets/Captura%20de%20pantalla%202024-01-11%20a%20la(s)%2012.37.05 p.m..png)
+
+## Link to app and repo
+The web page link: https://emiliocolds.github.io/Random-Password-Generator/
+
+The repo link: https://github.com/EmilioColds/Random-Password-Generator
+
